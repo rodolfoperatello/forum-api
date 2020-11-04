@@ -11,6 +11,18 @@ public class Resposta {
 	private Usuario autor;
 	private Boolean solucao = false;
 
+	public Resposta(){
+	}
+
+	public Resposta(String mensagem, Topico topico, LocalDateTime dataCriacao,
+					Usuario autor, Boolean solucao) {
+		this.mensagem = mensagem;
+		this.topico = topico;
+		this.dataCriacao = dataCriacao;
+		this.autor = autor;
+		this.solucao = solucao;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -34,6 +46,18 @@ public class Resposta {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Resposta{" +
+				"id=" + id +
+				", mensagem='" + mensagem + '\'' +
+				", topico=" + topico +
+				", dataCriacao=" + dataCriacao +
+				", autor=" + autor +
+				", solucao=" + solucao +
+				'}';
 	}
 
 	public Long getId() {
