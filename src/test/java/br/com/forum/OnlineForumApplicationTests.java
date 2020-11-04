@@ -1,4 +1,4 @@
-package br.com.forum.onlineforum;
+package br.com.forum;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
