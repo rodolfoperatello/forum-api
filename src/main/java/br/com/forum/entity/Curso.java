@@ -36,6 +36,15 @@ public class Curso {
 		return true;
 	}
 
+	@Override
+	public String toString() {
+		return "Curso{" +
+				"id=" + id +
+				", nome='" + nome + '\'' +
+				", categoria='" + categoria + '\'' +
+				'}';
+	}
+
 	public Long getId() {
 		return id;
 	}
