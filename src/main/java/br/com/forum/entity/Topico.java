@@ -15,10 +15,15 @@ public class Topico {
 	private Curso curso;
 	private List<Resposta> respostas = new ArrayList<>();
 
-	public Topico(String titulo, String mensagem, Curso curso) {
+	public Topico(){
+	}
+
+	public Topico(String titulo, String mensagem, Usuario autor, Curso curso, List<Resposta> respostas) {
 		this.titulo = titulo;
 		this.mensagem = mensagem;
 		this.curso = curso;
+		this.autor = autor;
+		this.respostas = respostas;
 	}
 
 	@Override
@@ -44,6 +49,20 @@ public class Topico {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Topico{" +
+				"id=" + id +
+				", titulo='" + titulo + '\'' +
+				", mensagem='" + mensagem + '\'' +
+				", dataCriacao=" + dataCriacao +
+				", status=" + status +
+				", autor=" + autor +
+				", curso=" + curso +
+				", respostas=" + respostas +
+				'}';
 	}
 
 	public Long getId() {
